@@ -11,7 +11,7 @@ def main () :
     st.title('Airline reviews for most popular airlines.')
 
     menu = ['Home','Search','Data','Chart']
-    choice = st.sidebar.selectbox('메뉴 선택',menu)
+    choice = st.sidebar.selectbox('MENU',menu)
 
     if choice == menu[0] :
         run_home()
