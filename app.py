@@ -1,4 +1,3 @@
-from turtle import home
 import streamlit as st
 import numpy as np
 from app_home import run_home
