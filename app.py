@@ -4,6 +4,7 @@ from app_home import run_home
 from app_search import run_search
 from app_data import run_data
 from app_chart import run_chart
+from app_ml import run_ml
 
 def message_cleaning(sentence) :
   # 1. 구두점 제거
@@ -19,7 +20,7 @@ def message_cleaning(sentence) :
 def main () :
 
 
-    menu = ['Home','Search','Data','Chart']
+    menu = ['Home','Search','Data','Chart','recommend']
     choice = st.sidebar.selectbox('MENU',menu)
 
     if choice == menu[0] :
@@ -30,6 +31,8 @@ def main () :
         run_data()
     elif choice == menu[3] :
         run_chart()
+    elif choice == menu[4] :
+        run_ml()
 
 
 if __name__ == '__main__' : 
