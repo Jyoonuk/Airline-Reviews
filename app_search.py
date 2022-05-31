@@ -36,8 +36,6 @@ def run_search():
          ratings_df_count1.columns = ['count']
          ratings_mean_count_df = rating_df_mean.join(ratings_df_count1)
     
-
-
          df = df.pivot_table(values = 'overall',index = 'author',columns = 'airline' ,aggfunc='mean')
          ANA_corr = df.corrwith('word')
          ANA_corr = ANA_corr.to_frame()
