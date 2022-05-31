@@ -7,7 +7,7 @@ def run_data():
 
     df = pd.read_csv('data/airline.csv',encoding ='ISO-8859-1').dropna()
     df = df.set_index('airline')
-    df = df[['aircraft','overall','author','customer_review','cabin']]
+    df = df[['aircraft','overall','author','cabin','customer_review']]
     df_mean = df.groupby('airline')['overall'].mean()
     df1 = pd.read_csv('data/airline.csv',encoding ='ISO-8859-1').dropna()
     rating_df_mean = df_mean.to_frame()         
