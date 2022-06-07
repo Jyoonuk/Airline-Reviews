@@ -48,3 +48,22 @@ def run_chart():
     plt.legend()     
     plt.show()
     st.pyplot(fig3)
+
+
+    st.text("(좌석 편안함,객실 서비스,음식 만족도,엔터테이먼트,지상 서비스,가성비")
+    st.text("overall은 1~10점 , 나머지는 1~5등급")
+    df2 = df[['overall','seat_comfort','cabin_service','food_bev','entertainment','ground_service','value_for_money']]
+    col_list = df2.columns
+    selected_list1 =st.multiselect('상관계수가 궁금한 컬럼들 선택',col_list)
+    if len(selected_list1) >= 2  :
+
+        fig1 = sns.pairplot(data = df[selected_list1])
+        st.pyplot(fig1)
+
+        st.text('선택하신 컬럼끼리의 상관계수 입니다.')
+        st.dataframe(df[selected_list1].corr())
+
+        
+        fig2 = plt.figure()
+        sns.heatmap(data = df[selected_list1].corr(), annot =True, fmt = '.2f', vmin =-1 , vmax = 1, cmap='coolwarm',linewidths=0.5)
+        st.pyplot(fig2)

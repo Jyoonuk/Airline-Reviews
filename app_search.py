@@ -14,10 +14,13 @@ def run_search():
     df = pd.read_csv('data/airline.csv',encoding ='ISO-8859-1').dropna()
     df = df.set_index('airline')
     df = df[['aircraft','overall','author','customer_review','cabin']]
-        
-    
+    df['customer_review'] = df['customer_review'].str.replace(r'Trip Verified', '')
+    df['customer_review'] = df['customer_review'].str.replace(r'|', '')
+    df['customer_review'] = df['customer_review'].str.replace(r'Not Verified', '')
+    df['customer_review'] = df['customer_review'].str.replace(r' ?©«¡¦ ', '')
+    df['customer_review'] = df['customer_review'].str.replace(r'?', '')
 
-    
+
     radio_menu = ['항공사 검색','항공기 검색']
     selected = st.radio('검색할 선택하세요',radio_menu)
 

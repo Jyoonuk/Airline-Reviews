@@ -19,7 +19,13 @@ def run_data():
     max_rating = ratings_mean_count_df.sort_values('overall',ascending= False).head(10)
     min_rating = ratings_mean_count_df.sort_values('overall',ascending= True).head(10)
     langth_rating = ratings_mean_count_df.sort_values('count',ascending= False).head(10)
+    df1['customer_review'] = df1['customer_review'].str.replace(r'Trip Verified', '')
+    df1['customer_review'] = df1['customer_review'].str.replace(r'|', '')
+    df1['customer_review'] = df1['customer_review'].str.replace(r'Not Verified', '')
+    df1['customer_review'] = df1['customer_review'].str.replace(r' ?©«¡¦ ', '')
+    df1['customer_review'] = df1['customer_review'].str.replace(r'?', '')
 
+    
     st.subheader('최고 평점을 받은 항공사')
     
     url1 = 'https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimgproc.airliners.net%2Fphotos%2Fairliners%2F5%2F1%2F2%2F6448215.jpg%3Fv%3Dv482e83923a4&type=sc960_832'
@@ -51,6 +57,13 @@ def run_data():
     st.dataframe(min_rating)
     if st.checkbox('평점이 가장 낮은 항공사 데이터 보기') :
         st.dataframe(df1.loc[df1['airline'] == 'Frontier Airlines',])
+
+
+    st.subheader('죄석등급별 평점')
+    st.dataframe(df.groupby('cabin')['overall'].mean().to_frame())
+
+
+
 
 
     st.subheader('항공사의 리뷰개수, 통계')

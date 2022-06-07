@@ -1,8 +1,10 @@
+from sqlalchemy import null
 import streamlit as st
 import pandas as pd 
 import matplotlib.pyplot as plt
 import seaborn as sb
 from PIL import Image
+from zmq import NULL
 
 def run_ml():
     df = pd.read_csv('data/airline.csv',encoding ='ISO-8859-1').dropna()
@@ -15,4 +17,7 @@ def run_ml():
     recom_airlines=all_corr[airlines_name].dropna()
     recom_airlines.columns=['correlation']
     recom_airlines = recom_airlines.sort_values(ascending=False).to_frame()
-    st.dataframe(recom_airlines)
+    if airlines_name == False :
+        st.info("유사한 항공사가 없습니다!")
+    else :
+        st.dataframe(recom_airlines.iloc[1: ])
