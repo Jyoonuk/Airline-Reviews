@@ -12,12 +12,9 @@ def run_ml():
     df1 = df.pivot_table(values = 'overall',index = 'author',columns = 'airline' ,aggfunc='mean')
     all_corr = df1.corr(min_periods=5)
     airlines = df['airline'].unique()
-    airlines_name = st.selectbox('항공사 선택',airlines)
+    airlines_name = st.selectbox('항공사 선택 ( 1에 가까울수록 유사한 항공사 )',airlines)
     all_corr[airlines]
     recom_airlines=all_corr[airlines_name].dropna()
     recom_airlines.columns=['correlation']
     recom_airlines = recom_airlines.sort_values(ascending=False).to_frame()
-    if airlines_name == False :
-        st.info("유사한 항공사가 없습니다!")
-    else :
-        st.dataframe(recom_airlines.iloc[1: ])
+    st.dataframe(recom_airlines.iloc[1: ].head(5))
