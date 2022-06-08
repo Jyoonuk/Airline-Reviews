@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 import seaborn as sns
 import platform
-import numpy as np
-
 from matplotlib import font_manager, rc
+import numpy as np
 plt.rcParams['axes.unicode_minus'] = False
+plt.rcParams['axes.unicode_minus'] = False
+if platform.system() == 'Linux':
+    rc('font', family='NanumGothic')
 
 if platform.system() == 'Darwin':
     rc('font', family='AppleGothic')
