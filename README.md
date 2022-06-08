@@ -3,8 +3,8 @@
 + 각 항공사들의 상관계수를 이용하여 
 + 유사한 항공사를 추천해주는 웹 입니다.
 
-데이터 출처 : https://www.kaggle.com/datasets/efehandanisman/skytrax-airline-reviews
-웹 주소 : http://15.164.229.97:8502/
++ 데이터 출처 : https://www.kaggle.com/datasets/efehandanisman/skytrax-airline-reviews
++ 웹 주소 : http://15.164.229.97:8502/
 
 # 데이터 컬럼 설명 
 + airline: Name of the airline.
@@ -18,9 +18,9 @@
 + valueformoney: Rated between 1-5
 
 분석
-평점,리뷰개수에 따라 항공사를 분석했다.
++ 평점,리뷰개수에 따라 항공사를 분석했다.
 
 추천
-항공사를 선택하고 그와 유사한 항공사를 5개 추천해준다.
++ 항공사를 선택하고 그와 유사한 항공사를 5개 추천해준다.
 
 
