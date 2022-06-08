@@ -6,7 +6,6 @@ import platform
 from matplotlib import font_manager, rc
 import numpy as np
 plt.rcParams['axes.unicode_minus'] = False
-plt.rcParams['axes.unicode_minus'] = False
 if platform.system() == 'Linux':
     rc('font', family='NanumGothic')
 
