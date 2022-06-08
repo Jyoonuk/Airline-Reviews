@@ -1,12 +1,5 @@
 import streamlit as st
-import numpy as np
 from streamlit_option_menu import option_menu
-import streamlit.components.v1 as html
-from  PIL import Image
-import cv2
-from st_aggrid import AgGrid
-import plotly.express as px
-import io 
 from app_home import run_home
 from app_search import run_search
 from app_data import run_data
