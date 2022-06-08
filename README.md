@@ -12,7 +12,8 @@
 + author: Author of the trip
 + reviewdate: Date of the Review customerreview: Review of the customers in free text format
 + aircraft: Type of the aircraft
-+ travellertype: Type of traveller (e.g. business, leisure) cabin: Cabin at the flight dateflown: Flight date
++ travellertype: Type of traveller (e.g. business, leisure) 
++ cabin: Cabin at the flight dateflown: Flight date
 + seatcomfort: Rated between 1-5 cabinservice: Rated between 1-5
 + foodbev: Rated between 1-5 entertainment: Rated between 1-5 groundservice: Rated between 1-5
 + valueformoney: Rated between 1-5
