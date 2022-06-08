@@ -3,6 +3,7 @@
 + 각 항공사들의 상관계수를 이용하여 
 + 유사한 항공사를 추천해주는 웹 입니다.
 
++ 사용한 언어 : python
 + 데이터 출처 : https://www.kaggle.com/datasets/efehandanisman/skytrax-airline-reviews
 + 웹 주소 : http://15.164.229.97:8502/
 
