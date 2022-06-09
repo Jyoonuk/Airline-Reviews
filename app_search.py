@@ -18,7 +18,7 @@ def run_search():
     df['customer_review'] = df['customer_review'].str.replace(r'|', '')
     df['customer_review'] = df['customer_review'].str.replace(r'Not Verified', '')
     df['customer_review'] = df['customer_review'].str.replace(r' ?©«¡¦ ', '')
-    df['customer_review'] = df['customer_review'].str.replace(r'?', '')
+
 
 
     radio_menu = ['항공사 검색','항공기 검색']
