@@ -5,7 +5,7 @@
 
 + 사용한 언어 : python
 + 데이터 출처 : https://www.kaggle.com/datasets/efehandanisman/skytrax-airline-reviews
-+ 웹 주소 : http://15.164.229.97:8502/
++ 웹 주소 : http://ec2-15-164-229-97.ap-northeast-2.compute.amazonaws.com:8502/
 
 # 데이터 컬럼 설명 
 + airline: Name of the airline.
